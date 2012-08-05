@@ -34,4 +34,43 @@ class RestController extends Controller
     {
         
     }
+    
+    public function responseList($list, $meta)
+    {
+        $body = array(
+            'meta' => $meta,
+            'objects' => $list
+        );
+        $this->sendResponse(CJSON::encode($body));
+    }
+    
+    public function responseObject($object)
+    {
+        $body = $object;
+        $this->sendResponse(CJSON::encode($body));
+    }
+    
+    public function responseError($message, $code, $internalCode = null, $internalMessage = null)
+    {
+        $body = array(
+            'error_object' => array(
+                'httpCode' => $code,
+                'httpMessage' => $message,
+                'internalCode' => $internalCode,
+                'internalMessage' => $internalMessage
+            )
+        );
+        $this->sendResponse(CJSON::encode($body), $code, $message);
+    }
+    
+    public function sendResponse($body, $code = 200, $message = "OK")
+    {
+        header("HTTP/1.1 " . $code . " " . $message);
+        header("Content-type: " . $this->contentType);
+                
+        echo $body;
+        
+        exit();
+    }
+    
 }
