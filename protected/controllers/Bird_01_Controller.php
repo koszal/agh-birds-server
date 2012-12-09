@@ -6,8 +6,12 @@ class Bird_01_Controller extends RestController
     
     const API_LEVEL = 1;
     
-    public function actionList($query = null, $order = null, $family = null, $genus = null, $country = null) {
+    public function actionList($api_key = null, $query = null, $order = null, $family = null, $genus = null, $country = null) {
 
+        $apiUser = ApiUser::authenticate($api_key);
+        if($apiUser == null) {
+            $this->responseError("Unauthorized", 401);
+        }
       
         $birds = Yii::app()->db->createCommand()
                 ->select('b.id, b.name, b.description, b.order, b.family, b.genus')
@@ -49,8 +53,14 @@ class Bird_01_Controller extends RestController
         $this->responseList($birds, $meta);   
     }
     
-    public function actionView($id)
+    public function actionView($api_key, $id)
     {
+        
+        $apiUser = ApiUser::authenticate($api_key);
+        if($apiUser == null) {
+            $this->responseError("Unauthorized", 401);
+        }
+        
         $object = Bird::model()->with('countries', 'medias')->findByPk($id);
         
         $bird = $object->getAttributes();
