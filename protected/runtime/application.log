@@ -426,3 +426,142 @@ Stack trace:
 REQUEST_URI=/birds/index.php/api/01/quiz
 in X:\projects\inzynierka\agh-birds-server\protected\controllers\Quiz_01_Controller.php (40)
 in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2012/12/09 17:50:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "question".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('question')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/question
+---
+2012/12/09 18:47:11 [error] [php] Invalid argument supplied for foreach() (X:\projects\inzynierka\framework\db\CDbCommand.php:767)
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 X:\projects\inzynierka\framework\web\CController.php(287): Bird_01_Controller->runAction()
+#4 X:\projects\inzynierka\framework\web\CController.php(266): Bird_01_Controller->runActionWithFilters()
+#5 X:\projects\inzynierka\framework\web\CWebApplication.php(283): Bird_01_Controller->run()
+#6 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 X:\projects\inzynierka\agh-birds-server\index.php(13): CWebApplication->run()
+REQUEST_URI=/birds/index.php/api/01/bird
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (39)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2012/12/09 18:47:34 [error] [php] Invalid argument supplied for foreach() (X:\projects\inzynierka\framework\db\CDbCommand.php:767)
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 X:\projects\inzynierka\framework\web\CController.php(287): Bird_01_Controller->runAction()
+#4 X:\projects\inzynierka\framework\web\CController.php(266): Bird_01_Controller->runActionWithFilters()
+#5 X:\projects\inzynierka\framework\web\CWebApplication.php(283): Bird_01_Controller->run()
+#6 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 X:\projects\inzynierka\agh-birds-server\index.php(13): CWebApplication->run()
+REQUEST_URI=/birds/index.php/api/01/bird
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (39)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2012/12/09 19:35:49 [error] [php] Invalid argument supplied for foreach() (X:\projects\inzynierka\framework\db\CDbCommand.php:767)
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 X:\projects\inzynierka\framework\web\CController.php(287): Bird_01_Controller->runAction()
+#4 X:\projects\inzynierka\framework\web\CController.php(266): Bird_01_Controller->runActionWithFilters()
+#5 X:\projects\inzynierka\framework\web\CWebApplication.php(283): Bird_01_Controller->run()
+#6 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 X:\projects\inzynierka\agh-birds-server\index.php(13): CWebApplication->run()
+REQUEST_URI=/birds/index.php/api/01/bird?query=dupa
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (40)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2012/12/09 19:36:30 [error] [php] Undefined variable: objects (X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php:50)
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 X:\projects\inzynierka\framework\web\CController.php(287): Bird_01_Controller->runAction()
+#3 X:\projects\inzynierka\framework\web\CController.php(266): Bird_01_Controller->runActionWithFilters()
+#4 X:\projects\inzynierka\framework\web\CWebApplication.php(283): Bird_01_Controller->run()
+#5 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#6 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 X:\projects\inzynierka\agh-birds-server\index.php(13): CWebApplication->run()
+REQUEST_URI=/birds/index.php/api/01/bird?query=dupa
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (50)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2012/12/09 20:05:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.name' in 'field list'. The SQL statement executed was: SELECT `id`, `name`, `description`, `order`, `family`, `genus`, `c`.`name`
+FROM `bird` `b`
+WHERE `name` LIKE '%tit%'.
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (34)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2012/12/09 20:05:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.name' in 'field list'. The SQL statement executed was: SELECT `id`, `name`, `description`, `order`, `family`, `genus`, `c`.`name`
+FROM `bird` `b`
+WHERE `name` LIKE '%tit%'' in X:\projects\inzynierka\framework\db\CDbCommand.php:528
+Stack trace:
+#0 X:\projects\inzynierka\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php(34): CDbCommand->queryAll()
+#2 [internal function]: Bird_01_Controller->actionList('tit', NULL, NULL, NULL, NULL)
+#3 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(Bird_01_Controller), Array)
+#4 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(Bird_01_Controller), Object(ReflectionMethod), Array)
+#5 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 X:\projects\inzynierka\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 X:\projects\inzynierka\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 X:\projects\inzynierka\framework\web\CWebApplication.php(283): CController->run('list')
+#9 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('bird_01_/list')
+#10 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/birds/index.php/api/01/bird?query=tit
+---
+2012/12/09 20:06:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.name' in 'field list'. The SQL statement executed was: SELECT `id`, `name`, `description`, `order`, `family`, `genus`, `c`.`name`
+FROM `bird` `b`
+WHERE `name` LIKE '%tit%'.
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (34)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2012/12/09 20:06:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.name' in 'field list'. The SQL statement executed was: SELECT `id`, `name`, `description`, `order`, `family`, `genus`, `c`.`name`
+FROM `bird` `b`
+WHERE `name` LIKE '%tit%'' in X:\projects\inzynierka\framework\db\CDbCommand.php:528
+Stack trace:
+#0 X:\projects\inzynierka\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php(34): CDbCommand->queryAll()
+#2 [internal function]: Bird_01_Controller->actionList('tit', NULL, NULL, NULL, NULL)
+#3 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(Bird_01_Controller), Array)
+#4 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(Bird_01_Controller), Object(ReflectionMethod), Array)
+#5 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 X:\projects\inzynierka\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 X:\projects\inzynierka\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 X:\projects\inzynierka\framework\web\CWebApplication.php(283): CController->run('list')
+#9 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('bird_01_/list')
+#10 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/birds/index.php/api/01/bird?query=tit
+---
+2012/12/09 20:07:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in field list is ambiguous. The SQL statement executed was: SELECT `id`, `name`, `description`, `order`, `family`, `genus`
+FROM `bird` `b`
+JOIN `bird_has_country` `h` ON b.id=h.bird_id
+JOIN `country` `c` ON h.country_id=c.id
+WHERE `c`.`name` LIKE '%ru%'.
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (34)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2012/12/09 20:07:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in field list is ambiguous. The SQL statement executed was: SELECT `id`, `name`, `description`, `order`, `family`, `genus`
+FROM `bird` `b`
+JOIN `bird_has_country` `h` ON b.id=h.bird_id
+JOIN `country` `c` ON h.country_id=c.id
+WHERE `c`.`name` LIKE '%ru%'' in X:\projects\inzynierka\framework\db\CDbCommand.php:528
+Stack trace:
+#0 X:\projects\inzynierka\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php(34): CDbCommand->queryAll()
+#2 [internal function]: Bird_01_Controller->actionList(NULL, NULL, NULL, NULL, 'ru')
+#3 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(Bird_01_Controller), Array)
+#4 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(Bird_01_Controller), Object(ReflectionMethod), Array)
+#5 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 X:\projects\inzynierka\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 X:\projects\inzynierka\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 X:\projects\inzynierka\framework\web\CWebApplication.php(283): CController->run('list')
+#9 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('bird_01_/list')
+#10 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/birds/index.php/api/01/bird?country=ru
+---

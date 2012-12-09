@@ -1,6 +1,6 @@
 <?php
-/* @var $this BirdController */
-/* @var $model Bird */
+/* @var $this MediaController */
+/* @var $model Media */
 ?>
 
 <div class="view">
@@ -13,29 +13,16 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('latin_name')); ?>:</b>
-	<?php echo CHtml::encode($data->latin_name); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('description')); ?>:</b>
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('order')); ?>:</b>
-	<?php echo CHtml::encode($data->order); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('filename')); ?>:</b>
+	<?php echo CHtml::encode($data->filename); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('family')); ?>:</b>
-	<?php echo CHtml::encode($data->family); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('genus')); ?>:</b>
-	<?php echo CHtml::encode($data->genus); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('species')); ?>:</b>
-	<?php echo CHtml::encode($data->species); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('mime_type')); ?>:</b>
+	<?php echo CHtml::encode($data->mime_type); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
@@ -44,6 +31,15 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('modified_at')); ?>:</b>
 	<?php echo CHtml::encode($data->modified_at); ?>
+	<br />
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('resource_type')); ?>:</b>
+	<?php echo CHtml::encode($data->resource_type); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('bird_id')); ?>:</b>
+	<?php echo CHtml::encode($data->bird_id); ?>
 	<br />
 
 	*/ ?>

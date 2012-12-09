@@ -13,17 +13,42 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'latin_name'); ?>
+		<?php echo $form->textField($model,'latin_name',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'description'); ?>
 		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'order'); ?>
+		<?php echo $form->textField($model,'order',array('size'=>60,'maxlength'=>127)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'family'); ?>
+		<?php echo $form->textField($model,'family',array('size'=>60,'maxlength'=>127)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'genus'); ?>
+		<?php echo $form->textField($model,'genus',array('size'=>60,'maxlength'=>127)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'species'); ?>
+		<?php echo $form->textField($model,'species',array('size'=>60,'maxlength'=>127)); ?>
 	</div>
 
 	<div class="row">
@@ -34,16 +59,6 @@
 	<div class="row">
 		<?php echo $form->label($model,'modified_at'); ?>
 		<?php echo $form->textField($model,'modified_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'deleted_at'); ?>
-		<?php echo $form->textField($model,'deleted_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'active'); ?>
-		<?php echo $form->textField($model,'active'); ?>
 	</div>
 
 	<div class="row buttons">

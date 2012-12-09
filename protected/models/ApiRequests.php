@@ -1,25 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "quiz".
+ * This is the model class for table "api_requests".
  *
- * The followings are the available columns in table 'quiz':
+ * The followings are the available columns in table 'api_requests':
  * @property integer $id
- * @property string $api_user_key
- * @property integer $time_limit
- * @property integer $is_closed
  * @property string $created_at
+ * @property string $url
+ * @property string $api_user_key
  *
  * The followings are the available model relations:
- * @property Question[] $questions
  * @property ApiUser $apiUserKey
  */
-class Quiz extends CActiveRecord
+class ApiRequests extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Quiz the static model class
+	 * @return ApiRequests the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -31,7 +29,7 @@ class Quiz extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'quiz';
+		return 'api_requests';
 	}
 
 	/**
@@ -42,12 +40,12 @@ class Quiz extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('api_user_key, created_at', 'required'),
-			array('time_limit, is_closed', 'numerical', 'integerOnly'=>true),
+			array('created_at, url, api_user_key', 'required'),
+			array('url', 'length', 'max'=>1024),
 			array('api_user_key', 'length', 'max'=>31),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, api_user_key, time_limit, is_closed, created_at', 'safe', 'on'=>'search'),
+			array('id, created_at, url, api_user_key', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,7 +57,6 @@ class Quiz extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'questions' => array(self::HAS_MANY, 'Question', 'quiz_id'),
 			'apiUserKey' => array(self::BELONGS_TO, 'ApiUser', 'api_user_key'),
 		);
 	}
@@ -71,10 +68,9 @@ class Quiz extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'api_user_key' => 'Api User Key',
-			'time_limit' => 'Time Limit',
-			'is_closed' => 'Is Closed',
 			'created_at' => 'Created At',
+			'url' => 'Url',
+			'api_user_key' => 'Api User Key',
 		);
 	}
 
@@ -90,10 +86,9 @@ class Quiz extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('api_user_key',$this->api_user_key,true);
-		$criteria->compare('time_limit',$this->time_limit);
-		$criteria->compare('is_closed',$this->is_closed);
 		$criteria->compare('created_at',$this->created_at,true);
+		$criteria->compare('url',$this->url,true);
+		$criteria->compare('api_user_key',$this->api_user_key,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

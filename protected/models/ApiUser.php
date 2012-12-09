@@ -1,18 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "bird_has_region".
+ * This is the model class for table "api_user".
  *
- * The followings are the available columns in table 'bird_has_region':
- * @property string $bird_id
- * @property string $region_id
+ * The followings are the available columns in table 'api_user':
+ * @property string $key
+ * @property string $created_at
+ * @property string $modified_at
+ *
+ * The followings are the available model relations:
+ * @property ApiRequests[] $apiRequests
+ * @property Quiz[] $quizs
  */
-class BirdHasRegion extends CActiveRecord
+class ApiUser extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return BirdHasRegion the static model class
+	 * @return ApiUser the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -24,7 +29,7 @@ class BirdHasRegion extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'bird_has_region';
+		return 'api_user';
 	}
 
 	/**
@@ -35,12 +40,12 @@ class BirdHasRegion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bird_id, region_id', 'required'),
-			array('bird_id', 'length', 'max'=>10),
-			array('region_id', 'length', 'max'=>8),
+			array('key, created_at', 'required'),
+			array('key', 'length', 'max'=>31),
+			array('modified_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('bird_id, region_id', 'safe', 'on'=>'search'),
+			array('key, created_at, modified_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,6 +57,8 @@ class BirdHasRegion extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'apiRequests' => array(self::HAS_MANY, 'ApiRequests', 'api_user_key'),
+			'quizs' => array(self::HAS_MANY, 'Quiz', 'api_user_key'),
 		);
 	}
 
@@ -61,8 +68,9 @@ class BirdHasRegion extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'bird_id' => 'Bird',
-			'region_id' => 'Region',
+			'key' => 'Key',
+			'created_at' => 'Created At',
+			'modified_at' => 'Modified At',
 		);
 	}
 
@@ -77,8 +85,9 @@ class BirdHasRegion extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('bird_id',$this->bird_id,true);
-		$criteria->compare('region_id',$this->region_id,true);
+		$criteria->compare('key',$this->key,true);
+		$criteria->compare('created_at',$this->created_at,true);
+		$criteria->compare('modified_at',$this->modified_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

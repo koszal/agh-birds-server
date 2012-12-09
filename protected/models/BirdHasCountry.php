@@ -1,21 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "classification".
+ * This is the model class for table "bird_has_country".
  *
- * The followings are the available columns in table 'classification':
- * @property string $id
- * @property string $bird_id
- * @property string $order_name
- * @property string $family
- * @property string $genus
+ * The followings are the available columns in table 'bird_has_country':
+ * @property integer $bird_id
+ * @property integer $country_id
  */
-class Classification extends CActiveRecord
+class BirdHasCountry extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Classification the static model class
+	 * @return BirdHasCountry the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +24,7 @@ class Classification extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'classification';
+		return 'bird_has_country';
 	}
 
 	/**
@@ -38,12 +35,11 @@ class Classification extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bird_id', 'required'),
-			array('bird_id', 'length', 'max'=>10),
-			array('order_name, family, genus', 'length', 'max'=>64),
+			array('bird_id, country_id', 'required'),
+			array('bird_id, country_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, bird_id, order_name, family, genus', 'safe', 'on'=>'search'),
+			array('bird_id, country_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,11 +60,8 @@ class Classification extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
 			'bird_id' => 'Bird',
-			'order_name' => 'Order Name',
-			'family' => 'Family',
-			'genus' => 'Genus',
+			'country_id' => 'Country',
 		);
 	}
 
@@ -83,11 +76,8 @@ class Classification extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('bird_id',$this->bird_id,true);
-		$criteria->compare('order_name',$this->order_name,true);
-		$criteria->compare('family',$this->family,true);
-		$criteria->compare('genus',$this->genus,true);
+		$criteria->compare('bird_id',$this->bird_id);
+		$criteria->compare('country_id',$this->country_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

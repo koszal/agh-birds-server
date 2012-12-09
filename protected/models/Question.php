@@ -10,16 +10,14 @@
  * @property string $answer2
  * @property string $answer3
  * @property string $answer4
- * @property integer $correct
- * @property integer $user_answer
- * @property string $created_at
- * @property string $modified_at
- * @property string $deleted_at
- * @property integer $active
- * @property string $quiz_id
+ * @property integer $users_answer
+ * @property integer $quiz_id
+ * @property integer $media_id
+ * @property integer $correct_answer
  *
  * The followings are the available model relations:
  * @property Quiz $quiz
+ * @property Media $media
  */
 class Question extends CActiveRecord
 {
@@ -49,15 +47,12 @@ class Question extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('question, answer1, answer2, answer3, answer4, correct, created_at, active, quiz_id', 'required'),
-			array('correct, user_answer, active', 'numerical', 'integerOnly'=>true),
-			array('question, answer1, answer3, answer4', 'length', 'max'=>256),
-			array('answer2', 'length', 'max'=>45),
-			array('quiz_id', 'length', 'max'=>10),
-			array('modified_at, deleted_at', 'safe'),
+			array('question, answer1, answer2, answer3, answer4, users_answer, quiz_id, media_id, correct_answer', 'required'),
+			array('users_answer, quiz_id, media_id, correct_answer', 'numerical', 'integerOnly'=>true),
+			array('question, answer1, answer2, answer3, answer4', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, question, answer1, answer2, answer3, answer4, correct, user_answer, created_at, modified_at, deleted_at, active, quiz_id', 'safe', 'on'=>'search'),
+			array('id, question, answer1, answer2, answer3, answer4, users_answer, quiz_id, media_id, correct_answer', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +65,7 @@ class Question extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'quiz' => array(self::BELONGS_TO, 'Quiz', 'quiz_id'),
+			'media' => array(self::BELONGS_TO, 'Media', 'media_id'),
 		);
 	}
 
@@ -85,13 +81,10 @@ class Question extends CActiveRecord
 			'answer2' => 'Answer2',
 			'answer3' => 'Answer3',
 			'answer4' => 'Answer4',
-			'correct' => 'Correct',
-			'user_answer' => 'User Answer',
-			'created_at' => 'Created At',
-			'modified_at' => 'Modified At',
-			'deleted_at' => 'Deleted At',
-			'active' => 'Active',
+			'users_answer' => 'Users Answer',
 			'quiz_id' => 'Quiz',
+			'media_id' => 'Media',
+			'correct_answer' => 'Correct Answer',
 		);
 	}
 
@@ -112,13 +105,10 @@ class Question extends CActiveRecord
 		$criteria->compare('answer2',$this->answer2,true);
 		$criteria->compare('answer3',$this->answer3,true);
 		$criteria->compare('answer4',$this->answer4,true);
-		$criteria->compare('correct',$this->correct);
-		$criteria->compare('user_answer',$this->user_answer);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('modified_at',$this->modified_at,true);
-		$criteria->compare('deleted_at',$this->deleted_at,true);
-		$criteria->compare('active',$this->active);
-		$criteria->compare('quiz_id',$this->quiz_id,true);
+		$criteria->compare('users_answer',$this->users_answer);
+		$criteria->compare('quiz_id',$this->quiz_id);
+		$criteria->compare('media_id',$this->media_id);
+		$criteria->compare('correct_answer',$this->correct_answer);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

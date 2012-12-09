@@ -52,7 +52,7 @@ return array(
         // uncomment the following to use a MySQL database
         
           'db'=>array(
-          'connectionString' => 'mysql:host=localhost;dbname=birds',
+          'connectionString' => 'mysql:host=localhost;dbname=birds2',
           'emulatePrepare' => true,
           'username' => 'root',
           'password' => '',

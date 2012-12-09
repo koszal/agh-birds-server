@@ -1,6 +1,6 @@
 <?php
-/* @var $this RegionController */
-/* @var $model Region */
+/* @var $this CountryController */
+/* @var $model Country */
 ?>
 
 <div class="view">
@@ -11,6 +11,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
 	<?php echo CHtml::encode($data->name); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('short_name')); ?>:</b>
+	<?php echo CHtml::encode($data->short_name); ?>
 	<br />
 
 

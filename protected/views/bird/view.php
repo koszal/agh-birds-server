@@ -23,10 +23,13 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'name',
+		'latin_name',
 		'description',
+		'order',
+		'family',
+		'genus',
+		'species',
 		'created_at',
 		'modified_at',
-		'deleted_at',
-		'active',
 	),
 )); ?>

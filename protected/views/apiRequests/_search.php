@@ -1,6 +1,6 @@
 <?php
-/* @var $this QuizController */
-/* @var $model Quiz */
+/* @var $this ApiRequestsController */
+/* @var $model ApiRequests */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,18 +17,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'api_user_key'); ?>
-		<?php echo $form->textField($model,'api_user_key',array('size'=>31,'maxlength'=>31)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'time_limit'); ?>
-		<?php echo $form->textField($model,'time_limit'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'created_at'); ?>
 		<?php echo $form->textField($model,'created_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'url'); ?>
+		<?php echo $form->textField($model,'url',array('size'=>60,'maxlength'=>1024)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'api_user_key'); ?>
+		<?php echo $form->textField($model,'api_user_key',array('size'=>31,'maxlength'=>31)); ?>
 	</div>
 
 	<div class="row buttons">

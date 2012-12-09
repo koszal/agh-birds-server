@@ -52,13 +52,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'answer3',
 		'answer4',
 		/*
-		'correct',
-		'user_answer',
-		'created_at',
-		'modified_at',
-		'deleted_at',
-		'active',
+		'users_answer',
 		'quiz_id',
+		'media_id',
+		'correct_answer',
 		*/
 		array(
 			'class'=>'CButtonColumn',

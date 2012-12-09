@@ -1,6 +1,6 @@
 <?php
 
-class RegionController extends Controller
+class CountryController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,14 +62,14 @@ class RegionController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Region;
+		$model=new Country;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Region']))
+		if(isset($_POST['Country']))
 		{
-			$model->attributes=$_POST['Region'];
+			$model->attributes=$_POST['Country'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -91,9 +91,9 @@ class RegionController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Region']))
+		if(isset($_POST['Country']))
 		{
-			$model->attributes=$_POST['Region'];
+			$model->attributes=$_POST['Country'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,7 +122,7 @@ class RegionController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Region');
+		$dataProvider=new CActiveDataProvider('Country');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class RegionController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Region('search');
+		$model=new Country('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Region']))
-			$model->attributes=$_GET['Region'];
+		if(isset($_GET['Country']))
+			$model->attributes=$_GET['Country'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -150,7 +150,7 @@ class RegionController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Region::model()->findByPk($id);
+		$model=Country::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -162,7 +162,7 @@ class RegionController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='region-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='country-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

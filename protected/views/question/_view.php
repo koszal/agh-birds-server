@@ -29,33 +29,21 @@
 	<?php echo CHtml::encode($data->answer4); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('correct')); ?>:</b>
-	<?php echo CHtml::encode($data->correct); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('users_answer')); ?>:</b>
+	<?php echo CHtml::encode($data->users_answer); ?>
 	<br />
 
 	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_answer')); ?>:</b>
-	<?php echo CHtml::encode($data->user_answer); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
-	<?php echo CHtml::encode($data->created_at); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('modified_at')); ?>:</b>
-	<?php echo CHtml::encode($data->modified_at); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('deleted_at')); ?>:</b>
-	<?php echo CHtml::encode($data->deleted_at); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('active')); ?>:</b>
-	<?php echo CHtml::encode($data->active); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('quiz_id')); ?>:</b>
 	<?php echo CHtml::encode($data->quiz_id); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('media_id')); ?>:</b>
+	<?php echo CHtml::encode($data->media_id); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('correct_answer')); ?>:</b>
+	<?php echo CHtml::encode($data->correct_answer); ?>
 	<br />
 
 	*/ ?>

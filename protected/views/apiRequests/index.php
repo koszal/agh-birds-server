@@ -1,18 +1,18 @@
 <?php
-/* @var $this RegionController */
+/* @var $this ApiRequestsController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Regions',
+	'Api Requests',
 );
 
 $this->menu=array(
-	array('label'=>'Create Region', 'url'=>array('create')),
-	array('label'=>'Manage Region', 'url'=>array('admin')),
+	array('label'=>'Create ApiRequests', 'url'=>array('create')),
+	array('label'=>'Manage ApiRequests', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Regions</h1>
+<h1>Api Requests</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

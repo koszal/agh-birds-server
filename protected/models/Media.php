@@ -1,25 +1,29 @@
 <?php
 
 /**
- * This is the model class for table "quiz".
+ * This is the model class for table "media".
  *
- * The followings are the available columns in table 'quiz':
+ * The followings are the available columns in table 'media':
  * @property integer $id
- * @property string $api_user_key
- * @property integer $time_limit
- * @property integer $is_closed
+ * @property string $name
+ * @property string $description
+ * @property string $filename
+ * @property string $mime_type
  * @property string $created_at
+ * @property string $modified_at
+ * @property string $resource_type
+ * @property integer $bird_id
  *
  * The followings are the available model relations:
+ * @property Bird $bird
  * @property Question[] $questions
- * @property ApiUser $apiUserKey
  */
-class Quiz extends CActiveRecord
+class Media extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Quiz the static model class
+	 * @return Media the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -31,7 +35,7 @@ class Quiz extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'quiz';
+		return 'media';
 	}
 
 	/**
@@ -42,12 +46,15 @@ class Quiz extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('api_user_key, created_at', 'required'),
-			array('time_limit, is_closed', 'numerical', 'integerOnly'=>true),
-			array('api_user_key', 'length', 'max'=>31),
+			array('name, description, filename, mime_type, created_at, resource_type, bird_id', 'required'),
+			array('bird_id', 'numerical', 'integerOnly'=>true),
+			array('name, filename', 'length', 'max'=>255),
+			array('mime_type', 'length', 'max'=>63),
+			array('resource_type', 'length', 'max'=>5),
+			array('modified_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, api_user_key, time_limit, is_closed, created_at', 'safe', 'on'=>'search'),
+			array('id, name, description, filename, mime_type, created_at, modified_at, resource_type, bird_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,8 +66,8 @@ class Quiz extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'questions' => array(self::HAS_MANY, 'Question', 'quiz_id'),
-			'apiUserKey' => array(self::BELONGS_TO, 'ApiUser', 'api_user_key'),
+			'bird' => array(self::BELONGS_TO, 'Bird', 'bird_id'),
+			'questions' => array(self::HAS_MANY, 'Question', 'media_id'),
 		);
 	}
 
@@ -71,10 +78,14 @@ class Quiz extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'api_user_key' => 'Api User Key',
-			'time_limit' => 'Time Limit',
-			'is_closed' => 'Is Closed',
+			'name' => 'Name',
+			'description' => 'Description',
+			'filename' => 'Filename',
+			'mime_type' => 'Mime Type',
 			'created_at' => 'Created At',
+			'modified_at' => 'Modified At',
+			'resource_type' => 'Resource Type',
+			'bird_id' => 'Bird',
 		);
 	}
 
@@ -90,10 +101,14 @@ class Quiz extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('api_user_key',$this->api_user_key,true);
-		$criteria->compare('time_limit',$this->time_limit);
-		$criteria->compare('is_closed',$this->is_closed);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('description',$this->description,true);
+		$criteria->compare('filename',$this->filename,true);
+		$criteria->compare('mime_type',$this->mime_type,true);
 		$criteria->compare('created_at',$this->created_at,true);
+		$criteria->compare('modified_at',$this->modified_at,true);
+		$criteria->compare('resource_type',$this->resource_type,true);
+		$criteria->compare('bird_id',$this->bird_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

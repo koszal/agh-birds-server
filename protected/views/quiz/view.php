@@ -22,10 +22,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
+		'api_user_key',
 		'time_limit',
 		'created_at',
-		'deleted_at',
-		'closed_at',
-		'active',
 	),
 )); ?>

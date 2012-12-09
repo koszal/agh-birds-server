@@ -1,13 +1,13 @@
 <?php
-/* @var $this RegionController */
-/* @var $model Region */
+/* @var $this CountryController */
+/* @var $model Country */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'region-form',
+	'id'=>'country-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -16,15 +16,15 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id',array('size'=>8,'maxlength'=>8)); ?>
-		<?php echo $form->error($model,'id'); ?>
+		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>63)); ?>
+		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'name'); ?>
+		<?php echo $form->labelEx($model,'short_name'); ?>
+		<?php echo $form->textField($model,'short_name',array('size'=>7,'maxlength'=>7)); ?>
+		<?php echo $form->error($model,'short_name'); ?>
 	</div>
 
 	<div class="row buttons">
