@@ -601,3 +601,196 @@ Stack trace:
 #7 {main}
 REQUEST_URI=/birds/index.php/api/01/bird
 ---
+2012/12/10 00:58:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apiKey_01_/create".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('apiKey_01_/crea...')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/api/01/apiKey/?api_key=null
+---
+2012/12/10 00:59:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apiKey_01_/create".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('apiKey_01_/crea...')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/api/01/apiKey/?api_key=null
+---
+2012/12/10 01:01:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apiKey_01_/create".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('apiKey_01_/crea...')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/api/01/apiKey/?api_key=null
+---
+2012/12/10 01:01:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apiKey_01_/create".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('apiKey_01_/crea...')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/api/01/apiKey/
+---
+2012/12/10 01:01:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apiKey_01_/create".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('apiKey_01_/crea...')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/api/01/apiKey
+---
+2012/12/10 01:02:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ApiKey_01_/create".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('ApiKey_01_/crea...')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/api/01/ApiKey
+---
+2012/12/10 01:02:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apiKey_01_/create".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('apiKey_01_/crea...')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/api/01/apiKey/?api_key=null
+---
+2013/01/07 03:17:16 [error] [php] Trying to get property of non-object (X:\projects\inzynierka\agh-birds-server\protected\controllers\MediaController.php:75)
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\filters\CFilterChain.php(134): MediaController->runAction()
+#1 X:\projects\inzynierka\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 X:\projects\inzynierka\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 X:\projects\inzynierka\framework\web\filters\CInlineFilter.php(59): MediaController->filterAccessControl()
+#4 X:\projects\inzynierka\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 X:\projects\inzynierka\framework\web\CController.php(292): CFilterChain->run()
+#6 X:\projects\inzynierka\framework\web\CController.php(266): MediaController->runActionWithFilters()
+#7 X:\projects\inzynierka\framework\web\CWebApplication.php(283): MediaController->run()
+#8 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 X:\projects\inzynierka\agh-birds-server\index.php(13): CWebApplication->run()
+REQUEST_URI=/birds/index.php/media/create?bird_id=2
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\MediaController.php (75)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2013/01/08 01:54:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.filename' in 'field list'. The SQL statement executed was: SELECT `b`.`id`, `b`.`name`, `b`.`description`, `b`.`order`, `b`.`family`, `b`.`genus`, `m`.`filename`
+FROM `bird` `b`
+WHERE `name` LIKE '%tit%'.
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (39)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2013/01/08 01:54:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.filename' in 'field list'. The SQL statement executed was: SELECT `b`.`id`, `b`.`name`, `b`.`description`, `b`.`order`, `b`.`family`, `b`.`genus`, `m`.`filename`
+FROM `bird` `b`
+WHERE `name` LIKE '%tit%'' in X:\projects\inzynierka\framework\db\CDbCommand.php:528
+Stack trace:
+#0 X:\projects\inzynierka\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php(39): CDbCommand->queryAll()
+#2 [internal function]: Bird_01_Controller->actionList('50c51d0cc157e', 'tit', NULL, NULL, NULL, NULL)
+#3 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(Bird_01_Controller), Array)
+#4 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(Bird_01_Controller), Object(ReflectionMethod), Array)
+#5 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 X:\projects\inzynierka\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 X:\projects\inzynierka\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 X:\projects\inzynierka\framework\web\CWebApplication.php(283): CController->run('list')
+#9 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('bird_01_/list')
+#10 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/birds/index.php/api/01/bird?api_key=50c51d0cc157e&query=tit
+---
+2013/01/08 01:56:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'filename' in 'field list'. The SQL statement executed was: SELECT `b`.`id`, `b`.`name`, `b`.`description`, `b`.`order`, `b`.`family`, `b`.`genus`, `filename`
+FROM `bird` `b`
+WHERE `name` LIKE '%tit%'.
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (39)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2013/01/08 01:56:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'filename' in 'field list'. The SQL statement executed was: SELECT `b`.`id`, `b`.`name`, `b`.`description`, `b`.`order`, `b`.`family`, `b`.`genus`, `filename`
+FROM `bird` `b`
+WHERE `name` LIKE '%tit%'' in X:\projects\inzynierka\framework\db\CDbCommand.php:528
+Stack trace:
+#0 X:\projects\inzynierka\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php(39): CDbCommand->queryAll()
+#2 [internal function]: Bird_01_Controller->actionList('50c51d0cc157e', 'tit', NULL, NULL, NULL, NULL)
+#3 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(Bird_01_Controller), Array)
+#4 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(Bird_01_Controller), Object(ReflectionMethod), Array)
+#5 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 X:\projects\inzynierka\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 X:\projects\inzynierka\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 X:\projects\inzynierka\framework\web\CWebApplication.php(283): CController->run('list')
+#9 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('bird_01_/list')
+#10 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/birds/index.php/api/01/bird?api_key=50c51d0cc157e&query=tit
+---
+2013/01/08 01:57:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'name' in where clause is ambiguous. The SQL statement executed was: SELECT `b`.`id`, `b`.`name`, `b`.`description`, `b`.`order`, `b`.`family`, `b`.`genus`, `m`.`filename`
+FROM `bird` `b`
+JOIN `media` `m` ON m.bird_id=b.id
+WHERE `name` LIKE '%tit%'.
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php (39)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2013/01/08 01:57:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'name' in where clause is ambiguous. The SQL statement executed was: SELECT `b`.`id`, `b`.`name`, `b`.`description`, `b`.`order`, `b`.`family`, `b`.`genus`, `m`.`filename`
+FROM `bird` `b`
+JOIN `media` `m` ON m.bird_id=b.id
+WHERE `name` LIKE '%tit%'' in X:\projects\inzynierka\framework\db\CDbCommand.php:528
+Stack trace:
+#0 X:\projects\inzynierka\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 X:\projects\inzynierka\agh-birds-server\protected\controllers\Bird_01_Controller.php(39): CDbCommand->queryAll()
+#2 [internal function]: Bird_01_Controller->actionList('50c51d0cc157e', 'tit', NULL, NULL, NULL, NULL)
+#3 X:\projects\inzynierka\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(Bird_01_Controller), Array)
+#4 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(Bird_01_Controller), Object(ReflectionMethod), Array)
+#5 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 X:\projects\inzynierka\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 X:\projects\inzynierka\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 X:\projects\inzynierka\framework\web\CWebApplication.php(283): CController->run('list')
+#9 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('bird_01_/list')
+#10 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/birds/index.php/api/01/bird?api_key=50c51d0cc157e&query=tit
+---
+2013/01/09 02:01:53 [error] [php] Undefined offset: 0 (X:\projects\inzynierka\agh-birds-server\protected\controllers\Quiz_01_Controller.php:51)
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CController.php(287): Quiz_01_Controller->runAction()
+#1 X:\projects\inzynierka\framework\web\CController.php(266): Quiz_01_Controller->runActionWithFilters()
+#2 X:\projects\inzynierka\framework\web\CWebApplication.php(283): Quiz_01_Controller->run()
+#3 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 X:\projects\inzynierka\agh-birds-server\index.php(13): CWebApplication->run()
+REQUEST_URI=/birds/index.php/api/01/quiz
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Quiz_01_Controller.php (51)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)
+2013/01/09 02:10:36 [error] [exception.CException] exception 'CException' with message 'Property "Question.answer" is not defined.' in X:\projects\inzynierka\framework\base\CComponent.php:131
+Stack trace:
+#0 X:\projects\inzynierka\framework\db\ar\CActiveRecord.php(144): CComponent->__get('answer')
+#1 X:\projects\inzynierka\agh-birds-server\protected\controllers\Quiz_01_Controller.php(60): CActiveRecord->__get('answer')
+#2 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(50): Quiz_01_Controller->actionCreate()
+#3 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 X:\projects\inzynierka\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 X:\projects\inzynierka\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 X:\projects\inzynierka\framework\web\CWebApplication.php(283): CController->run('create')
+#7 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('quiz_01_/create')
+#8 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/birds/index.php/api/01/quiz
+---
+2013/01/09 03:48:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "question_01_/create".' in X:\projects\inzynierka\framework\web\CWebApplication.php:287
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController('question_01_/cr...')
+#1 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 X:\projects\inzynierka\agh-birds-server\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/birds/index.php/api/01/question?api_key=50c51d0cc157e&question_id=131&answer=1
+---
+2013/01/09 03:48:43 [error] [php] Undefined variable: qustion_id (X:\projects\inzynierka\agh-birds-server\protected\controllers\Question_01_Controller.php:42)
+Stack trace:
+#0 X:\projects\inzynierka\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 X:\projects\inzynierka\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 X:\projects\inzynierka\framework\web\CController.php(287): Question_01_Controller->runAction()
+#3 X:\projects\inzynierka\framework\web\CController.php(266): Question_01_Controller->runActionWithFilters()
+#4 X:\projects\inzynierka\framework\web\CWebApplication.php(283): Question_01_Controller->run()
+#5 X:\projects\inzynierka\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#6 X:\projects\inzynierka\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 X:\projects\inzynierka\agh-birds-server\index.php(13): CWebApplication->run()
+REQUEST_URI=/birds/index.php/api/01/question?api_key=50c51d0cc157e&question_id=131&answer=1
+in X:\projects\inzynierka\agh-birds-server\protected\controllers\Question_01_Controller.php (42)
+in X:\projects\inzynierka\agh-birds-server\index.php (13)

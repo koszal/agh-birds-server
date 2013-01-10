@@ -14,8 +14,9 @@ class Bird_01_Controller extends RestController
         }
       
         $birds = Yii::app()->db->createCommand()
-                ->select('b.id, b.name, b.description, b.order, b.family, b.genus')
-                ->from('bird b');
+                ->select('b.id, b.name, b.description, b.order, b.family, b.genus, m.filename as thumbnail')
+                ->from('bird b')
+                ->join('media m', 'm.bird_id=b.id');
         
         if($country != null)
         $birds->join('bird_has_country h', 'b.id=h.bird_id')
@@ -24,16 +25,18 @@ class Bird_01_Controller extends RestController
         
         
         if($query != null)
-            $birds->where(array('like', 'name', '%' . $query . '%'));
+            $birds->where(array('like', 'b.name', '%' . $query . '%'));
         
         if($order != null)
-            $birds->where(array('like', 'order', '%' . $order . '%'));
+            $birds->where(array('like', 'b.order', '%' . $order . '%'));
         
         if($family != null)
-            $birds->where(array('like', 'family', '%' . $family . '%'));
+            $birds->where(array('like', 'b.family', '%' . $family . '%'));
         
         if($genus != null)
-            $birds->where(array('like', 'genus', '%' . $genus . '%'));
+            $birds->where(array('like', 'b.genus', '%' . $genus . '%'));
+        
+        $birds->group('b.id');
         
         $birds = $birds->queryAll();
         

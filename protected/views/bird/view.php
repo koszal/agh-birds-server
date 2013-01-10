@@ -33,3 +33,5 @@ $this->menu=array(
 		'modified_at',
 	),
 )); ?>
+
+<?php echo CHTML::link("add photo", $this->createUrl('media/create', array('bird_id'=>$model->id))) ?>

@@ -53,7 +53,7 @@ class RestController extends Controller
     public function responseError($message, $code, $internalCode = null, $internalMessage = null)
     {
         $body = array(
-            'error_object' => array(
+            'error_message' => array(
                 'httpCode' => $code,
                 'httpMessage' => $message,
                 'internalCode' => $internalCode,

@@ -1,7 +1,7 @@
 <?php
 
 
-class Bird_01_Controller extends RestController
+class Question_01_Controller extends RestController
 {
     
     const API_LEVEL = 1;
@@ -29,6 +29,21 @@ class Bird_01_Controller extends RestController
         } else {
             $this->responseError('Not found', 404);
         }
+        
+    }
+    
+    public function actionCreate($api_key, $question_id, $answer) {
+        
+        $apiUser = ApiUser::authenticate($api_key);
+        if($apiUser == null) {
+            $this->responseError("Unauthorized", 401);
+        }
+        
+        $question = Question::model()->findByPk($question_id);
+        $question->users_answer = $answer;
+        $question->save();
+        
+        $this->responseObject($question);
         
     }
     
